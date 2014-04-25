@@ -1,0 +1,510 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <title>Taking Development Tools To The Next Level</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <link rel="stylesheet" href="../node_modules/shower-ok-invert/styles/screen_43.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/modernizr.video.js"></script>
+    <script>
+        if (Modernizr.video && Modernizr.video.h264 !== "") {
+            body = document.getElementsByTagName('html');
+
+            body[0].classList.add('modernizr-h264');
+        }
+
+	    var isMobile = false;
+
+		if (navigator.userAgent.match(/Android/i)
+		|| navigator.userAgent.match(/webOS/i)
+		|| navigator.userAgent.match(/iPhone/i)
+		|| navigator.userAgent.match(/iPad/i)
+		|| navigator.userAgent.match(/iPod/i)
+		|| navigator.userAgent.match(/BlackBerry/i)
+		|| navigator.userAgent.match(/Windows Phone/i)
+		) {
+		    var body = document.getElementsByTagName('html');
+
+		    isMobile = true;
+
+		    body[0].classList.add('mobile');
+		}
+    </script>
+
+</head>
+<body class="list">
+
+<header class="caption">
+    <h1>Taking Development Tools To The Next Level</h1>
+
+	<p><a href="http://rhr.me">Robert Haritonov</a>, <a href="http://twitter.com/operatino_en">@operatino_en</a>, Head of Front End Development at <a href="http://corp.mail.ru/en/company/social/">OK.ru</a></p>
+
+	<p style="font-size:.8em;"><a href="http://feopsconf.com">Front-end Ops Conf</a>, San Francisco, 2014</p>
+
+    <!--<a href="https://github.com/operatino/pres-ime"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>-->
+
+</header>
+
+<section class="slide shout" id="Cover"><div>
+    <div class="intro-video hide-for-mobile">
+        <video preload loop>
+            <source src="videos/build.mp4" type="video/mp4;">
+        </video>
+
+        <div class="overlay" ></div>
+    </div>
+
+    <h2 class="bold light">Taking Development Tools<br> To The Next Level</h2>
+
+    <div class="place b author">
+        <div><a class="bl" href="http://rhr.me">Robert Haritonov</a>, <a class="bl" href="http://twitter.com/operatino_en">@operatino_en</a></div>
+        <div style="font-size: .7em">Head of Front End Development at</div>
+        <a href="http://corp.mail.ru/en/company/social/" style="border: none;"><img class="ok" src="../node_modules/shower-ok-invert/images/ok-logo-or.svg" alt="одноклассники"></a>
+    </div>
+</div></section>
+
+<section class="slide shout" id="ime"><div>
+    <h2 class="left">
+        <strong class="bold">I</strong><span class="next thin">ntegrated</span><br>
+        <strong class="bold">M</strong><span class="next thin">anagement</span><br>
+        <strong class="bold">E</strong><span class="next thin">nvironment</span>
+    </h2>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img class="gif stub" src="i/what.jpg" alt="What?"/>
+    <img class="gif real" src="i/what.gif" alt="What?"/>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2 class="left"><span class="num">1.</span>Style<br> Guides</h2>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2 class="left">For web</h2>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Adapting Style Guides For Web</h2>
+
+    <h3>= Living Style Guides</h3>
+
+    <ul>
+        <li>Guide to existing site styles</li>
+        <li>Lives in the code; evolves with the site or app</li>
+        <li>Collaboration tool both for engineers and designers</li>
+    </ul>
+
+    <p class="note" style="margin-top: 2em">© Nicole Sullivan: <a class="lp" href="https://www.youtube.com/watch?v=lsaG-EJcu88">Creating Living Style Guides</a></p>
+
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="i/spec1.jpg" alt="spec page" />
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="i/spec2.jpg" alt="spec page" />
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="i/spec3.jpg" alt="spec page" />
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="i/spec4.jpg" alt="spec page" />
+</div></section>
+
+<section class="slide"><div>
+    <h2>A Good Style Guide Leads To</h2>
+
+    <ul>
+        <li>A better UI layer code</li>
+        <li>More thoughtful design choices</li>
+        <li>A better performing site</li>
+        <li class="next"><strong>A better performing Team</strong></li>
+    </ul>
+
+    <!--But Nicole did not mentioned about how do we work with Style Guides-->
+
+    <p class="note" style="margin-top: 2em">More about <a class="lp" href="http://alistapart.com/article/creating-style-guides">Style Guides</a></p>
+
+</div></section>
+
+<section class="slide shout"><div>
+    <h2 class="light">x2 with IME</h2>
+</div></section>
+
+<section class="slide"><div>
+    <h2>IME is a Style Guide on Steroids</h2>
+
+    <ul>
+        <li>A better UI layer code <strong style="font-size: 1.3em;">x2</strong></li>
+        <li>More thoughtful design choices <strong style="font-size: 1.3em;">x2</strong></li>
+        <li>A better performing site <strong style="font-size: 1.3em;">x2</strong></li>
+        <li><strong>A better performing Team <strong style="font-size: 1.3em;">x2</strong></strong></li>
+    </ul>
+
+</div></section>
+
+<section class="slide" id="must"><div>
+    <div class="em place m">
+        <div>To get Style Guides work more efficiently,</div>
+        <strong class="next" style="font-size: 1.1em">it must become a Development Tool.</strong>
+    </div>
+</div></section>
+
+<section class="slide shout" id="m"><div>
+    <h2 class="left">
+        <span>For Front-end modules</span><br>
+        Management <span>&</span><br>
+        Maintenance
+    </h2>
+</div></section>
+
+<section class="slide"><div>
+    <div class="em place m">
+        <div>We can create own IME <div class="next">as a <strong>web application</strong></div></div>
+        <strong class="next">on top of our Living Style Gudes.</strong>
+    </div>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Front-end IME Features</h2>
+
+    <ol>
+        <li>Living Style Guide essentials</li>
+        <li>Specialized tools for designers</li>
+        <li>Collaboration tools</li>
+        <li>Result testing</li>
+        <li>GUI for console tools</li>
+    </ol>
+
+</div></section>
+
+<section class="slide shout"><div>
+    <h2 class="left">
+        Essentials
+    </h2>
+</div></section>
+
+<section class="slide clean"><div>
+    <h2>Living Style Guide essentials demo</h2>
+
+	<div class="video_wrapper">
+		To watch demo video, please open slides in browser that supports .mp4 playback, like Chrome or Safari.
+
+	    <video class="place m t" preload>
+	        <source src="videos/spec.mp4" type="video/mp4;">
+	    </video>
+	</div>
+
+</div></section>
+
+<section class="slide shout typo" id="living"><div>
+    <h2 class="left">
+        <span style="font-size: 70px; color: #fff;">The "Living" Part is about</span><br>
+        <span style="font-size: 135px;">Development</span><br>
+        <span style="font-size: 70px; color: #fff;">Directly in the</span><br>
+        <span style="font-size: 135px;">Style Guide</span>
+    </h2>
+</div></section>
+
+<section class="slide"><div>
+    <h2 style="text-align: center;">BEM + Living Style Guide</h2>
+    <a href="http://bem.info" style="border: none;"><img class="place m" src="i/bem.png" alt="BEM"/></a>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="i/bem-files.png" alt="BEM files" />
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="i/spec1.jpg" alt="spec page" />
+</div></section>
+
+<section class="slide shout source"><div>
+    <h2 style="margin-top: -50px;">Source</h2>
+    <a href="http://sourcejs.com" class="place m" style="font-size:60px; line-height: 1.2; margin-top: 60px; color:  #A6E4FF">sourcejs.com</a>
+    <img src="i/header_bg_x2.png" class="cover w h">
+</div></section>
+
+<section class="slide shout source"><div>
+    <h2 class="left" style="margin-left: 85px; font-size: 100px"><img width="440" style="vertical-align: middle" src="i/tpl-engines.png" alt="Templating engines"/> <span style="font-size: 70px">+</span> Source</h2>
+    <img src="i/header_bg_x2.png" class="cover w h">
+</div></section>
+
+<section class="slide shout source"><div>
+    <h2 class="left" style="margin-left: 75px; font-size: 70px"><img width="200" style="vertical-align: middle" src="i/tpl-engines.png" alt="Templating engines"/> <span style="font-size: 70px">↔</span> Source <span style="font-size: 70px">↔</span> Plugins</h2>
+    <img src="i/header_bg_x2.png" class="cover w h">
+</div></section>
+
+<section class="slide shout"><div>
+    <h2 class="left"><span class="num">2.</span>IME For<br> Designers</h2>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img class="gif stub" src="i/superman.jpg" alt="Superman"/>
+    <img class="gif real" src="i/superman.gif" alt="Superman"/>
+</div></section>
+
+<section class="slide clean"><div>
+    <h2>Interactive colors Style Guide demo</h2>
+
+	<div class="video_wrapper">
+        To watch demo video, please open slides in browser that supports .mp4 playback, like Chrome or Safari.
+
+	    <video class="place m t" preload>
+	        <source src="videos/styles.mp4" type="video/mp4;">
+	    </video>
+	</div>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img class="place l t" src="i/interactive-graphics.jpg" alt="Interactive Graphics Style Guide"/>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img class="place l t" src="i/interactive-graphics2.jpg" alt="Interactive Graphics Style Guide"/>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img class="gif stub" src="i/thankyou.jpg" alt="Thank you"/>
+    <img class="gif real" src="i/thankyou.gif" alt="Thank you"/>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2 class="left" style="font-size: 125px;"><span class="num">3.</span>Collaboration<br> Tools</h2>
+</div></section>
+
+<section class="slide"><div>
+    <h2>For In-place Discussions</h2>
+
+    <h3>Integrating our IME with</h3>
+
+	<ul>
+	    <li>Task managers like Jira, Redmine</li>
+	    <li>GitHub Issues or GitLab</li>
+	    <li>Skype, email and others</li>
+	    <li class="next"><strong>Comments</strong></li>
+	</ul>
+</div></section>
+
+<section class="slide clean"><div>
+    <h2>Comments plugin demo</h2>
+
+	<div class="video_wrapper">
+        To watch demo video, please open slides in browser that supports .mp4 playback, like Chrome or Safari.
+
+	    <video class="place m t" preload>
+	        <source src="videos/comments.mp4" type="video/mp4;">
+	    </video>
+	</div>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2 class="left"><span class="num">4.</span>Result<br> Testing</h2>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Yesterdays Development Process</h2>
+
+    <div class="process" style="margin-top: 4em">
+		<div class="process_i __arrw"><div style="margin-top: -25px">IDE,<br> console tools</div></div
+		><div class="process_i __arrw">index.html</div
+		><div class="process_i">Deployment</div>
+	</div>
+
+</div></section>
+
+<section class="slide"><div>
+    <h2>Update of Development Process</h2>
+
+    <div class="process" style="margin-top: 4em">
+		<div class="process_i __arrw"><div style="margin-top: -25px">IDE,<br> console tools</div></div
+		><div class="process_i __arrw"><div class="bold" style="font-size: 1.7em; margin-top: -18px;">IME</div></div
+		><div class="process_i">Deployment</div>
+	</div>
+
+</div></section>
+
+<section class="slide"><div>
+    <h2>Update of Development Process</h2>
+
+    <div class="process" style="margin-top: 4em">
+		<div class="process_i __arrw"><div style="margin-top: -25px">IDE,<br> console tools</div></div
+		><div class="process_i __arrw"><div class="bold" style="font-size: 1.7em; margin-top: -18px;">Source</div></div
+		><div class="process_i">Deployment</div>
+	</div>
+
+</div></section>
+
+<section class="slide cover"><div>
+    <h2>All Elements on One Page</h2>
+
+    <ul>
+        <li>No need to imitate user actions</li>
+        <li>Easy consistency check</li>
+    </ul>
+
+    <p class="note" style="margin-top: 2em;"><a class="lp" href="http://www.stubbornella.org/content/2014/04/09/style-guide-driven-development/">Style Guide Driven Development</a></p>
+
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="i/spec1.jpg" alt="spec page" />
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="i/spec2.jpg" alt="spec page" />
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="i/spec3.jpg" alt="spec page" />
+</div></section>
+
+<section class="slide cover"><div>
+    <h2>Auto-testing</h2>
+
+    <ul>
+        <li>Checking user content with your blocks</li>
+        <li>Screenshot comparing after code refactoring</li>
+        <li>Run cross-browser testing</li>
+    </ul>
+
+</div></section>
+
+<section class="slide shout"><div>
+    <h2 class="left" style="font-size: 120px;"><span class="num">5.</span>Console Tools<br> GUI</h2>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Update of Development Process</h2>
+
+    <div class="process" style="margin-top: 4em">
+		<div class="process_i __arrw"><div style="margin-top: -25px">IDE,<br> console tools</div></div
+		><div class="process_i __arrw"><div class="bold" style="font-size: 1.7em; margin-top: -18px;">IME</div></div
+		><div class="process_i">Deployment</div>
+	</div>
+
+</div></section>
+
+<section class="slide cover"><div>
+    <h2>GUI for Console Tools</h2>
+
+    <ul>
+        <li>Background performance metrics</li>
+        <li>HTML, CSS, JS Lints</li>
+        <li>WCAG validation and etc</li>
+    </ul>
+
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="i/debug1.jpg" alt="console tools gui"/>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="i/debug2.jpg" alt="console tools gui"/>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2 class="left">Lego Prototyping</h2>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2 class="left" style="color: #fff">With<br> Source API</h2>
+</div></section>
+
+<section class="slide clean"><div>
+    <h2>Lego Prototyping From Real Style Guides Demo</h2>
+
+	<div class="video_wrapper">
+        To watch demo video, please open slides in browser that supports .mp4 playback, like Chrome or Safari.
+
+	    <video class="place m" style="width: 1165px; height: auto;" preload>
+	        <source src="videos/lego1.mp4" type="video/mp4;">
+	    </video>
+	</div>
+</div></section>
+
+<section class="slide clean"><div>
+    <h2>Lego Prototyping From Real Style Guides Demo</h2>
+
+	<div class="video_wrapper">
+        To watch demo video, please open slides in browser that supports .mp4 playback, like Chrome or Safari.
+
+	    <video class="place m t" style="width: 1165px; height: auto;" preload>
+	        <source src="videos/lego2.mp4" type="video/mp4;">
+	    </video>
+    </div>
+</div></section>
+
+<section class="slide shout source"><div>
+    <h2 style="margin-top: -50px;">Source</h2>
+    <a href="http://sourcejs.com" class="place m" style="font-size:60px; line-height: 1.2; margin-top: 60px; color:  #A6E4FF">sourcejs.com</a>
+    <img src="i/header_bg_x2.png" class="cover w h">
+</div></section>
+
+<section class="slide"><div>
+    <h2>Taking Development Tools<br> <span style="line-height: 1.4">To The Next Level</span></h2>
+    <div class="fz-l">Robert Haritonov, <a href="http://twitter.com/operatino_en">@operatino_en</a>, <a href="http://corp.mail.ru/en/company/social/">OK.ru</a></div>
+    <ul class="fz-l">
+        <li><a href="mailto:r@rhr.me">r@rhr.me</a></li>
+        <li><a href="http://sourcejs.com">sourcejs.com</a></li>
+    </ul>
+    <p style="margin-top: 1em;">Slides - <a href="http://rhr.me/pres/ime">rhr.me/pres/ime</a></p>
+</div></section>
+
+<div class="progress"><div></div></div>
+<script src="../node_modules/shower/node_modules/shower-core/shower.min.js"></script>
+
+<script src="js/jquery-2.1.0.min.js"></script>
+<script src="js/script.js"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter9913402 = new Ya.Metrika({id:9913402,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/9913402" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '520c8f3d613f5d40400002a7');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+
+<!-- Powered by Shower presentation engine - Copyright © 2010–2013 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>

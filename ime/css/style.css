@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Museo';
+    src: url('../fonts/museocyrl_500-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Tech slide decoration */
+@media screen { /* bug with ok-hack logo in print to PDF verstion */
+    .slide:before {
+	    right: 10px;
+	    bottom: -18px;
+	    width: 118px;
+	    height: 200px;
+	    background-image: url(../../node_modules/shower-ok-invert/images/ok-hack.svg);
+	    }
+    }
+
+#Cover {
+
+    }
+    #Cover h2 {
+        margin-top: -65px;
+        font-size:75px;
+	    line-height: 1.4;
+        }
+
+    #Cover .author {
+        width: 100%;
+        margin-bottom: 60px;
+        font-size: 1.2em;
+        text-align: center;
+        }
+
+    #Cover .bl {
+        color: inherit !important;
+        border-bottom: none !important;
+        }
+
+    #Cover .bl:hover {
+        border-bottom: solid 2px !important;
+        }
+
+    #Cover .ok {
+        margin-top: 10px;
+        height: 50px;
+        border-radius: 10px;
+        }
+
+    #Cover .intro-video {
+        display: none;
+        }
+
+    .modernizr-h264 #Cover .intro-video {
+        display: block;
+        }
+
+#ime {
+
+    }
+
+    #ime h2 span {
+        font-size: 120px;
+        }
+
+#m {
+
+    }
+
+    #m h2 {
+        font-size: 135px;
+        }
+
+    #m span {
+        font-size: 75px;
+        color: #fff;
+        }
+
+.typo {
+
+    }
+
+    .slide.typo h2 {
+        line-height: 1.1;
+        font-size: 1em;
+        }
+
+.source h2  {
+    font-family: 'Museo' !important;
+    color: #FFF !important;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+    }
+
+.num {
+    float: left;
+    height: 2em;
+    margin-right: .2em;
+    }
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .6;
+    }
+
+.slide video {
+    position: absolute;
+
+    height: 100%;
+    min-width: 100%;
+    left: -1px;
+    top: 0;
+	background-color: #000; /* TODO: add loading bar */
+    }
+
+.mobile .video_wrapper {
+	position: relative;
+	height: 300px;
+	}
+
+.slide .gif.real {
+    display: none;
+    }
+
+
+    .process {
+        margin-top: 30px;
+        margin-left: -7%;
+        }
+
+    .process_i {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 26%;
+        margin-left: 7%;
+        border: solid 4px #EB7218;
+        text-align: center;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 50px 10px 0;
+        min-height: 130px;
+        border-radius: 10px;
+        line-height: 1.2;
+        }
+
+    .process_i.__arrw:after {
+        content: "➧";
+        position: absolute;
+        top: 50%;
+        color: #eb722e;
+        left: 100%;
+        font-size: 75px;
+        margin-left: 15px;
+        line-height: 0;
+        border-radius: 13px;
+        }
+
+    .process.__stretch .process_i {
+        width: auto;
+        min-width: 14%; /* TODO: use flexbox with autoprefixer */
+        }
+
+.mobile .hide-for-mobile {
+	display: none !important;
+	}
+
+.mobile .slide .video_wrapper {
+	display: none;
+	}
+
+.mobile .slide.active .video_wrapper {
+	display: block;
+	}

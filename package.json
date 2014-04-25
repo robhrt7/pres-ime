@@ -1,0 +1,21 @@
+{
+  "name": "pres-automation",
+  "version": "0.1.0",
+  "description": "Slides about Front-end Automation (RU).",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/operatino/pres-automation.git"
+  },
+  "keywords": [
+    "presentation",
+    "shower",
+    "slides"
+  ],
+  "dependencies": {
+    "shower": "^1.0.5",
+    "shower-ok": "git://github.com/operatino/shower-ok-invert#v0.1.0"
+  },
+  "author": "Robert Haritonov",
+  "readmeFilename": "README.md"
+}
