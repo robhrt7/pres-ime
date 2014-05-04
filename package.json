@@ -13,7 +13,7 @@
     "slides"
   ],
   "dependencies": {
-    "shower": "^1.0.5",
+    "shower": "git://github.com/operatino/core",
     "shower-ok": "git://github.com/operatino/shower-ok-invert#v0.1.0"
   },
   "author": "Robert Haritonov",
