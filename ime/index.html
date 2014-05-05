@@ -9,15 +9,8 @@
 
 	<!--Video plugin-->
     <link rel="stylesheet" href="css/video.css">
-    <script src="js/modernizr.video.js"></script>
     <script>
         var debugMode = true;
-
-        if (Modernizr.video && Modernizr.video.h264 !== "") {
-            html = document.getElementsByTagName('html');
-
-            html[0].classList.add('modernizr-h264');
-        }
 
 	    var isMobile = false;
         var isIPnone = false;
@@ -67,10 +60,11 @@
 
 </header>
 
-<section class="slide shout cover" id="Cover"><div>
+<section class="slide shout cover h" id="Cover"><div>
     <div class="intro-video hide-for-mobile">
         <video preload loop>
             <source src="videos/build.mp4" type="video/mp4;">
+            <source src="videos/build.webm" type="video/webm;">
         </video>
 
         <div class="overlay"></div>
@@ -210,14 +204,15 @@
     </h2>
 </div></section>
 
-<section class="slide cover"><div>
+<section class="slide cover h"><div>
     <h2>Living Style Guide essentials demo</h2>
 
 	<div class="video_wrapper">
-		To watch demo video, please open slides in browser that supports .mp4 playback, like Chrome or Safari.
+		To watch demo video, please open slides in browser that supports .mp4 or .webm playback.
 
-	    <video class="place m t" preload>
+	    <video preload>
 	        <source src="videos/spec.mp4" type="video/mp4;">
+	        <source src="videos/spec.webm" type="video/webm;">
 	    </video>
 	</div>
 
@@ -270,14 +265,15 @@
     <img class="gif real" src="i/superman.gif" alt="Superman"/>
 </div></section>
 
-<section class="slide cover"><div>
+<section class="slide cover h"><div>
     <h2>Interactive colors Style Guide demo</h2>
 
 	<div class="video_wrapper">
-        To watch demo video, please open slides in browser that supports .mp4 playback, like Chrome or Safari.
+        To watch demo video, please open slides in browser that supports .mp4 or .webm playback.
 
-	    <video class="place m t" preload>
+	    <video preload>
 	        <source src="videos/styles.mp4" type="video/mp4;">
+	        <source src="videos/styles.webm" type="video/webm;">
 	    </video>
 	</div>
 </div></section>
@@ -312,14 +308,15 @@
 	</ul>
 </div></section>
 
-<section class="slide cover"><div>
+<section class="slide cover h"><div>
     <h2>Comments plugin demo</h2>
 
 	<div class="video_wrapper">
-        To watch demo video, please open slides in browser that supports .mp4 playback, like Chrome or Safari.
+        To watch demo video, please open slides in browser that supports .mp4 or .webm playback.
 
-	    <video class="place m t" preload autoplay>
+	    <video preload>
 	        <source src="videos/comments.mp4" type="video/mp4;">
+	        <source src="videos/comments.webm" type="video/webm;">
 	    </video>
 	</div>
 </div></section>
@@ -438,26 +435,28 @@
     <h2 class="left" style="color: #fff">With<br> Source API</h2>
 </div></section>
 
-<section class="slide cover"><div>
+<section class="slide cover h"><div>
     <h2>Lego Prototyping From Real Style Guides Demo</h2>
 
 	<div class="video_wrapper">
-        To watch demo video, please open slides in browser that supports .mp4 playback, like Chrome or Safari.
+        To watch demo video, please open slides in browser that supports .mp4 or .webm playback.
 
-	    <video class="place m" style="width: 1165px; height: auto;" preload>
+	    <video style="width: 1165px;" preload>
 	        <source src="videos/lego1.mp4" type="video/mp4;">
+	        <source src="videos/lego1.webm" type="video/webm;">
 	    </video>
 	</div>
 </div></section>
 
-<section class="slide cover"><div>
+<section class="slide cover h"><div>
     <h2>Lego Prototyping From Real Style Guides Demo</h2>
 
 	<div class="video_wrapper">
-        To watch demo video, please open slides in browser that supports .mp4 playback, like Chrome or Safari.
+        To watch demo video, please open slides in browser that supports .mp4 or .webm playback.
 
-	    <video class="place m t" style="width: 1165px; height: auto;" preload>
+	    <video style="width: 1165px;" preload>
 	        <source src="videos/lego2.mp4" type="video/mp4;">
+	        <source src="videos/lego2.webm" type="video/webm;">
 	    </video>
     </div>
 </div></section>
@@ -479,8 +478,7 @@
 </div></section>
 
 <div class="progress"><div></div></div>
-<!--<script src="../node_modules/shower-core/shower.min.js"></script>-->
-<script src="js/shower.js"></script>
+<script src="../node_modules/shower-core/shower.min.js"></script>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">

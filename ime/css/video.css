@@ -1,24 +1,90 @@
+/*
+	Video plugin for Shower, HTML presentation engine (github.com/shower/shower)
+
+	Browser support: latest versions of all major browsers
+
+	@author Robert Haritonov <r@rhr.me>
+	@twitter @operatino
+*/
+
+
+/*
+
+    .video_wrapper - generated automatically
+        video
+
+*/
+
 video {
 	background-color: #000; /* for overlaying fallback text */
 	}
 
-/* make video scale like images in Shower */
-.slide.cover video {
-    position: absolute;
-	z-index: 1;
+/* Hiding all videos by default, to stop browser crashing from multiple video init */
+.mobile .video_wrapper {
+	display: none;
+	}
 
-    height: 100%;
-    min-width: 100%;
-    left: -1px; /* retina fix */
-    top: 0;
+/* Video sizing same as images in Cover mode */
+.slide.cover video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.slide.cover.w video {
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.slide.cover.h video {
+  left: 50%;
+  height: 100%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.slide.cover.w.h video {
+  top: 0;
+  left: 0;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+/* TODO: build with preprocessor */
+
+/*
+    iPads wont calculate proporcional dimensions by themselves
+    So we'll do it for it, assuming that video is 16:9
+*/
+.ipad .slide.cover.w video {
+    width: 1024px;
+    height: 576px;
     }
 
+.ipad .slide.cover.h video {
+    /* 4x3 */
+    width: 1366px; /* height/9*16 */
+    height: 768px;
+
+    /* 16:10 */
+    /*width: 1138px;*/
+    /*height: 640px;*/
+    }
+
+/* Turning off video stretch for iphone */
 .iphone .slide.cover .video_wrapper {
 	position: relative; /* making video stretch relatively to its wrapper fo mobile devices */
 	height: 300px;
-	}
-
-/* Hiding all videos by default, to stop browser crashing from multiple video init */
-.mobile .slide.cover .video_wrapper {
-	display: none;
 	}
