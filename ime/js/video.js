@@ -74,6 +74,7 @@ var startVideo = function(){
 
 				if(isMobile && showerCssInit === 0) {
 					//TODO: add loader
+					//TODO: on first page visit with video, add play button
 
 					//initing video after first Shower CSS init, to avoid CPU load bottleneck
 					setTimeout(function(){
