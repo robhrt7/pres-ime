@@ -8,43 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
 
 	<!--Video plugin-->
-    <link rel="stylesheet" href="css/video.css">
-    <script>
-        var debugMode = true;
-
-	    var isMobile = false;
-        var isIPnone = false;
-	    var isIPad = false;
-
-        var html = document.getElementsByTagName('html')[0];
-
-		if (navigator.userAgent.match(/Android/i)
-		|| navigator.userAgent.match(/webOS/i)
-		|| navigator.userAgent.match(/iPhone/i)
-		|| navigator.userAgent.match(/iPad/i)
-		|| navigator.userAgent.match(/iPod/i)
-		|| navigator.userAgent.match(/BlackBerry/i)
-		|| navigator.userAgent.match(/Windows Phone/i)
-		) {
-		    isMobile = true;
-
-		   html.classList.add('mobile');
-		}
-
-		if ( navigator.userAgent.match(/iPhone/i) ) {
-		    isIPnone = true;
-
-            html.classList.add('iphone');
-		}
-
-		if ( navigator.userAgent.match(/iPad/i) ) {
-		    isIPad = true;
-
-		    html.classList.add('ipad');
-		}
-    </script>
-	<script src="js/video.js"></script>
-	<!--/Video plugin-->
+    <link rel="stylesheet" href="../node_modules/shower-video/shower-video.css">
+	<script src="../node_modules/shower-video/shower-video.min.js"></script>
+    <!--/Video plugin-->
 
 </head>
 <body class="list">
