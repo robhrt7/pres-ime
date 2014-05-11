@@ -11,3 +11,5 @@ cd pres-ime
 npm install
 open ime/index.html
 ```
+
+NOTE: Presentation is now working with forked Shower Core, till Shower get events API.

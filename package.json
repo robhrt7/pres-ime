@@ -13,9 +13,9 @@
     "slides"
   ],
   "dependencies": {
-    "shower": "git://github.com/operatino/core",
+    "shower-core": "git://github.com/operatino/core",
     "shower-video": "git://github.com/operatino/shower-video#v0.0.2",
-    "shower-ok": "git://github.com/operatino/shower-ok-invert#v0.1.0"
+    "shower-ok-invert": "git://github.com/operatino/shower-ok-invert#v0.1.0"
   },
   "author": "Robert Haritonov",
   "readmeFilename": "README.md"
