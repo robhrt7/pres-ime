@@ -1,7 +1,7 @@
 "Taking Development Tools To The Next Level"
 ===============
 
-Online - http://rhr.me/pres/ime
+Online - http://rhr.me/pres/ime, video recording - https://www.youtube.com/watch?v=cMIad0zl00I
 
 To setup slides locally, run those commands:
 
